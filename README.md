@@ -4,7 +4,7 @@ An Arduino-based IoT system designed to monitor water levels and provide real-ti
 
 
 
-![Project Preview](Project_Image.jpg)
+![Project Preview](Project_Image.jpeg)
 
 
 ## Features
