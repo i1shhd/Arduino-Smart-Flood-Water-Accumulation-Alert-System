@@ -1,8 +1,8 @@
 #include <SoftwareSerial.h>
 SoftwareSerial BTSerial(0, 1); // RX, TX
-const int sensorPin = A0; دبوس قراءة الحساس //
+const int sensorPin = A0;  // دبوس قراءة الحساس 
 
-الجديدة LED دبابيس //
+// الجديدة LED دبابيس 
 const int ledRed = 11;
 const int ledYellow = 10;
 const int ledGreen = 8;
@@ -18,7 +18,7 @@ BTSerial.begin(9600);
 Serial.println("System Started...");
 }
 void loop() {
-sensor Value = analogRead(sensorPin); / قراءة الحساس
+sensor Value = analogRead(sensorPin); // قراءة الحساس
 Serial.print("Sensor Value: ");
 Serial.println(sensorValue);
 BTSerial.println(sensorValue);
@@ -27,14 +27,14 @@ digitalWrite(ledGreen, LOW);
 digitalWrite(ledYellow, LOW);
 digitalWrite(ledRed, LOW);
 
-# حسب مستوى الماء LEDS التحكم في 
-if(sensorValue >=500{ #خطر →- أحمر 
+// حسب مستوى الماء LEDS التحكم في 
+if(sensorValue >=500 {        //خطر →- أحمر 
 digitalWrite(ledRed, HIGH);
 digitalWrite(ledGreen, LOW);
 digitalWrite (ledYellow, LOW);
 BTSerial.println("Alert: Danger!");
 ｝
-else if(sensorValue >= 200) # تحذير <- أصفر
+else if(sensorValue >= 200) // تحذير <- أصفر
 digitalWrite(ledYellow, HIGH);
 digital Write(ledGreen, LOW);
 digitalWrite(ledRed, LOW);
@@ -42,7 +42,7 @@ BTSerial.println("Warning: Early Alert");
 
 }
 else if(sensorValu < 200 {
-digitalWrite(ledGreen, HIGH); أمن → أخضر //
+digitalWrite(ledGreen, HIGH); //أمن → أخضر 
 digitalWrite(ledGreen, LOW);
 digitalWrite(ledRed, LOW);
 BTSerial.println("Status: Safe");
