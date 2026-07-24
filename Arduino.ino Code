@@ -1,7 +1,6 @@
 #include <SoftwareSerial.h>
 SoftwareSerial BTSerial(0, 1); // RX, TX
-const int sensorPin = A0;  // دبوس قراءة الحساس 
-
+const int sensorPin = A0;  // Sensor reading pin
 // Defining new LED pins
 const int ledRed = 11;
 const int ledYellow = 10;
