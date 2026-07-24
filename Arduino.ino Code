@@ -29,26 +29,27 @@ digitalWrite(ledYellow, LOW);
 digitalWrite(ledRed, LOW);
 
 // حسب مستوى الماء LEDS التحكم في 
-if(sensorValue >=500) {        //خطر →- أحمر 
+if (sensorValue >=500) {        //خطر →- أحمر 
 digitalWrite(ledRed, HIGH);
 digitalWrite(ledGreen, LOW);
 digitalWrite(ledYellow, LOW);
 BTSerial.println("Alert: Danger!");
-｝
-else if(sensorValue >= 200) // تحذير <- أصفر
+}
+
+else if (sensorValue >= 200){ // تحذير <- أصفر
 digitalWrite(ledYellow, HIGH);
 digitalWrite(ledGreen, LOW);
 digitalWrite(ledRed, LOW);
 BTSerial.println("Warning: Early Alert");
-
 }
-else if(sensorValue < 200) {
+
+else if (sensorValue < 200) {
 digitalWrite(ledGreen, HIGH); //أمن → أخضر 
 digitalWrite(ledYellow, LOW);
 digitalWrite(ledRed, LOW);
 BTSerial.println("Status: Safe");
 }
-else{
+else {
 digitalWrite(ledGreen, LOW);
 digitalWrite(ledRed, LOW);
 digitalWrite(ledYellow, LOW);
