@@ -3,7 +3,7 @@
 An Arduino-based IoT system designed to monitor water levels and provide real-time flood alerts. The system continuously measures the distance between the sensor and the water surface using an ultrasonic sensor. When the water level reaches predefined thresholds, visual indicators and Bluetooth notifications are activated to provide early warnings.
 
 
-
+## Project Preview
 ![Project Preview](Project_Image.jpeg)
 
 ## Sample Output
