@@ -18,11 +18,12 @@ BTSerial.begin(9600);
 Serial.println("System Started...");
 }
 void loop() {
-sensor Value = analogRead(sensorPin); // قراءة الحساس
+sensorValue = analogRead(sensorPin); // قراءة الحساس
 Serial.print("Sensor Value: ");
 Serial.println(sensorValue);
 BTSerial.println(sensorValue);
-# LEDs turned off
+
+// LEDs turned off
 digitalWrite(ledGreen, LOW);
 digitalWrite(ledYellow, LOW);
 digitalWrite(ledRed, LOW);
@@ -31,12 +32,13 @@ digitalWrite(ledRed, LOW);
 if(sensorValue >=500 {        //خطر →- أحمر 
 digitalWrite(ledRed, HIGH);
 digitalWrite(ledGreen, LOW);
-digitalWrite (ledYellow, LOW);
+digitalWrite(ledYellow, LOW);
 BTSerial.println("Alert: Danger!");
+)
 ｝
 else if(sensorValue >= 200) // تحذير <- أصفر
 digitalWrite(ledYellow, HIGH);
-digital Write(ledGreen, LOW);
+digitalWrite(ledGreen, LOW);
 digitalWrite(ledRed, LOW);
 BTSerial.println("Warning: Early Alert");
 
